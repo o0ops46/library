@@ -56,7 +56,7 @@ function addBookToLibrary() {
     let title = titleInput.value;
     let author = authorInput.value;
     let pages = pagesInput.value;
-    let read = readInput.checked;
+    let read = readInput.value;
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
     displayLibrary();
@@ -65,18 +65,18 @@ function addBookToLibrary() {
 
 //  display myLibrary
 function displayLibrary() {
-  let table = document.createElement('table');
-  let headerRow = document.createElement('tr');
-  let titleHeader = document.createElement('th');
+  let table = document.querySelector('table');
+  let headerRow = document.querySelector('.headerRow');
+  let titleHeader = document.querySelector('.titleHeader');
   titleHeader.innerHTML = 'Title';
   headerRow.appendChild(titleHeader);
-  let authorHeader = document.createElement('th');
+  let authorHeader = document.querySelector('.authorHeader');
   authorHeader.innerHTML = 'Author';
   headerRow.appendChild(authorHeader);
-  let pagesHeader = document.createElement('th');
+  let pagesHeader = document.querySelector('.pagesHeader');
   pagesHeader.innerHTML = 'Pages';
   headerRow.appendChild(pagesHeader);
-  let readHeader = document.createElement('th');
+  let readHeader = document.querySelector('.readHeader');
   readHeader.innerHTML = 'Read';
   headerRow.appendChild(readHeader);
   table.appendChild(headerRow);
@@ -86,6 +86,8 @@ function displayLibrary() {
     let titleData = document.createElement('td');
     titleData.innerHTML = book.title;
     bookRow.appendChild(titleData);
+    let authorData = document.createElement('td');
+    authorData.innerHTML = book.author;
     let pagesData = document.createElement('td');
     pagesData.innerHTML = book.pages;
     bookRow.appendChild(pagesData);
@@ -94,6 +96,6 @@ function displayLibrary() {
     bookRow.appendChild(readData);
     table.appendChild(bookRow);
   }
-  document.body.appendChild(table);
 }
 addBookToLibrary();
+displayLibrary();
