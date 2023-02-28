@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h2>Library</h2>
-    <div class="library"></div>
-    <div id="library-container"></div>
-    <table>
-      <tr class="headerRow">
-        <th class="titleHeader"></th>
-        <th class="authorHeader"></th>
-        <th class="pagesHeader"></th>
-        <th class="readHeader"></th>
-      </tr>
-    </table>
+    <form action="#">
+      <label for="title">Title:</label><br />
+      <input type="text" id="title" name="title" /><br />
+      <label for="author">Author:</label><br />
+      <input type="text" id="author" name="author" />
+      <label for="pages">Pages:</label><br />
+      <input type="number" id="pages" name="pages" />
+      <label for="read">Read:</label><br />
+      <input type="text" id="read" name="read" />
+      <button class="addBookBtn">add to library</button>
+    </form>
+    <div class="myLibrary"></div>
   </body>
 </html>

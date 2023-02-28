@@ -1,0 +1,20 @@
+form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 300px;
+}
+label,
+input,
+button {
+  margin-left: 10px;
+  padding: 5px;
+}
+input {
+  width: 150px;
+}
+.addBookBtn {
+  width: 100px;
+  margin-top: 10px;
+}
