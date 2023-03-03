@@ -1,6 +1,6 @@
 'use strict';
 // select elements
-const displayBooks = document.querySelector('.myLibrary');
+const bookDetails = document.querySelector('.myLibrary');
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -21,9 +21,13 @@ function addBookToLibrary() {
   myLibrary.push(result);
 }
 //call addBookToLibrary
-// addBookToLibrary();
+addBookToLibrary();
 //
-myLibrary.forEach(element => {
-  let div = document.createElement('div');
-  document.body.appendChild(div);
-});
+function display() {
+  myLibrary.forEach(element => {
+    let div = document.createElement('div');
+    div.classList.add('all-books');
+    div.innerHTML = `${element.title} ${element.author} ${element.pages} ${element.read}`;
+    document.body.appendChild(div);
+  });
+}

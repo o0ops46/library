@@ -3,6 +3,7 @@ form {
   flex-direction: column;
   border: 2px solid black;
   border-radius: 20px;
+  padding: 10px;
   width: 300px;
 }
 label,
@@ -17,4 +18,11 @@ input {
 .addBookBtn {
   width: 100px;
   margin-top: 10px;
+}
+.all-books {
+  width: 300px;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
 }
