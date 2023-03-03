@@ -1,6 +1,8 @@
 'use strict';
 // select elements
 const bookDetails = document.querySelector('.myLibrary');
+//select the button that is adding the books
+const addBookBtn = document.querySelector('.addBookBtn');
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -21,7 +23,7 @@ function addBookToLibrary() {
   myLibrary.push(result);
 }
 //call addBookToLibrary
-addBookToLibrary();
+// addBookToLibrary();
 //
 function display() {
   myLibrary.forEach(element => {
