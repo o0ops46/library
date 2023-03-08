@@ -15,6 +15,17 @@ button {
 input {
   width: 150px;
 }
+.form-input {
+  width: 100px;
+  display: flex;
+}
+.form-input label {
+  min-width: 50px;
+  margin: 10px;
+}
+.form-input input {
+  margin: 10px;
+}
 .addBookBtn {
   width: 100px;
   margin-top: 10px;
