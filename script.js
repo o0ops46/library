@@ -28,7 +28,7 @@ addBookToLibrary();
 
 div.classList.add('all-books');
 function display() {
-  div.innerHTML = '';
+  div.innerHTML = `<h2>My Library</h2>`;
   myLibrary.forEach(element => {
     let p = document.createElement('p');
     p.innerHTML = `Title: ${element.title} <br> Author: ${element.author} <br> Pages: ${element.pages} <br> Read: ${element.read}`;
@@ -36,6 +36,11 @@ function display() {
     const deleteBtn = document.createElement('button');
     deleteBtn.innerHTML = 'Delete';
     deleteBtn.setAttribute('class', 'delete-button');
+    deleteBtn.addEventListener('click', function () {
+      myLibrary.splice(myLibrary.indexOf(element), 1);
+      display();
+    });
+
     div.appendChild(p);
     p.appendChild(deleteBtn);
   });

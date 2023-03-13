@@ -1,3 +1,6 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -39,14 +42,25 @@ input {
   border-radius: 20px;
   padding: 10px;
 }
+.all-books h2 {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+.display-none {
+  display: none;
+}
 .book-shelf {
   height: 100px;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   width: auto;
   border: 2px solid black;
 }
 .delete-button {
-  width: 50px;
+  margin-left: 0;
+  border-radius: 20px;
+  width: 4rem;
+  height: 2rem;
 }
