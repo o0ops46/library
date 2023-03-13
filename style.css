@@ -31,9 +31,22 @@ input {
   margin-top: 10px;
 }
 .all-books {
+  display: flex;
   width: 300px;
+  flex-direction: column;
   margin-top: 20px;
   border: 2px solid black;
   border-radius: 20px;
   padding: 10px;
+}
+.book-shelf {
+  height: 100px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  border: 2px solid black;
+}
+.delete-button {
+  width: 50px;
 }

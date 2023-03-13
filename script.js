@@ -18,8 +18,7 @@ function addBookToLibrary() {
     let pages = document.querySelector('#pages').value;
     let read = '';
     let readStatus = document.querySelector('#read');
-    readStatus ? (read = 'Yes') : (read = 'No');
-
+    readStatus.checked ? (read = 'Yes') : (read = 'No');
     let result = new Book(title, author, pages, read);
     myLibrary.push(result);
     display();
@@ -32,8 +31,13 @@ function display() {
   div.innerHTML = '';
   myLibrary.forEach(element => {
     let p = document.createElement('p');
-    p.innerHTML = `${element.title} ${element.author} ${element.pages} ${element.read}`;
+    p.innerHTML = `Title: ${element.title} <br> Author: ${element.author} <br> Pages: ${element.pages} <br> Read: ${element.read}`;
+    p.setAttribute('class', 'book-shelf');
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = 'Delete';
+    deleteBtn.setAttribute('class', 'delete-button');
     div.appendChild(p);
+    p.appendChild(deleteBtn);
   });
   bookDetails.appendChild(div);
 }
